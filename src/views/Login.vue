@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-btn>teste</v-btn>
     <h2>Login</h2>
     <form>
+      <v-btn>texte</v-btn>
       <div class="mb-3">
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuário">
       </div>
@@ -12,6 +12,7 @@
       <button type="submit" class="btn btn-primary">Entrar</button>
     </form>
   </div>
+  
 </template>
 
 <script>
