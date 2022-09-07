@@ -1,10 +1,13 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/login">Login</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <!-- <div id="nav">
+      <router-link to="/">Personagem</router-link> |
+      <router-link to="/episodios">Episódios</router-link> | 
+      <router-link to="/locais">Locais</router-link> |
+      <router-link to="/sobre">Sobre</router-link>
+    </div> -->
+    <router-view/>
+  </div>
 </template>
 
 <style>

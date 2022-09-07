@@ -1,5 +1,5 @@
 <template>
-  <div class="main container-fluid">
+  <div class="main">
     <div class="row d-flex justify-content-around">
       <div class="col-4 mt-0">
         <img class="totoro-img img-fluid" src="../assets/totoro.png" alt="totoro" />
@@ -20,7 +20,6 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -31,12 +30,15 @@ export default {
 
 <style scoped>
 .main{
-  background-color: #012E40 !important;
+  /* background-color: #012E40 !important; */
+  background-image: url(../assets/backgroundNight.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .totoro-img{
   max-height: 1080px;
-  animation: raios 4s infinite linear;
+  animation: raios 5s infinite linear;
 }
 
 .form-control{
@@ -53,7 +55,7 @@ export default {
   text-align: start;
   color: #3CA6A6;
   font-family: fantasy;
-  text-shadow: 0 0 2em #DBF227 !important;
+  /* text-shadow: 1px -4px 40px #F2E205 !important; */
 }
 
 .btn-submit{
@@ -74,36 +76,45 @@ export default {
 
 .btn-submit:active, .btn-submit:focus{
   text-shadow: 0 0 1em #012E40 !important;
-  box-shadow: 0 0 2em #DBF227 !important;
-  background-color: #DBF227;
-  border-color: #DBF227;
+  box-shadow: 0 0 2em #F2E205 !important;
+  background-color: #F2E205;
+  border-color: #F2E205;
 }
 
 @keyframes raios {
   0%{
-    -webkit-filter: drop-shadow(0 0 1em #daf22750);
-    filter: drop-shadow(0 0 1em #daf22752);
+    -webkit-filter: drop-shadow(0 0 1em #f2e20542);
+    filter: drop-shadow(0 0 1em #f2e205bd);
   }
   20%{
-    -webkit-filter: drop-shadow(0 0 2em #daf22750);
-    filter: drop-shadow(0 0 2em #daf22752);
+    -webkit-filter: drop-shadow(0 0 2em #f2e20542);
+    filter: drop-shadow(0 0 2em #f2e205bd);
   }
   40%{
-    -webkit-filter: drop-shadow(0 0 3em #daf22750);
-    filter: drop-shadow(0 0 3em #daf22752);
+    -webkit-filter: drop-shadow(0 0 3em #f2e20542);
+    filter: drop-shadow(0 0 3em #f2e205bd);
   }
   60%{
-    -webkit-filter: drop-shadow(0 0 3em #daf22750);
-    filter: drop-shadow(0 0 3em #daf22752);
+    -webkit-filter: drop-shadow(0 0 3em #f2e20542);
+    filter: drop-shadow(0 0 3em #f2e205bd);
   }
   80%{
-    -webkit-filter: drop-shadow(0 0 2em #daf22750);
-    filter: drop-shadow(0 0 2em #daf22752);
+    -webkit-filter: drop-shadow(0 0 2em #f2e20542);
+    filter: drop-shadow(0 0 2em #f2e205bd);
   }
   100%{
-    -webkit-filter: drop-shadow(0 0 1em #daf22750);
-    filter: drop-shadow(0 0 1em #daf22752);
+    -webkit-filter: drop-shadow(0 0 1em #f2e20542);
+    filter: drop-shadow(0 0 1em #f2e205bd);
   }
-
 }
+
+/* Responsividade */
+/* @media (min-height: 1081px) and ()
+{
+  .main
+   {
+    height: 1440px;
+   }
+} */
+
 </style>
