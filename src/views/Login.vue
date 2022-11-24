@@ -1,20 +1,22 @@
 <template>
   <div class="main">
     <div class="row d-flex justify-content-around">
-      <div class="col-4 mt-0">
-        <img class="totoro-img img-fluid" src="../assets/totoro.png" alt="totoro" />
+      <div class="col mt-0">
+        <img id="totoro-img" src="../assets/totoroGuardaChuva.png" alt="totoro" />
       </div>
-      <div class="div-form col-5">
+      <div class="div-form col">
         <form class="form-login">
+          <img id="logo" src="../assets/animesversoLogoHD.png" alt="logo" />
           <h2 class="titulo-login mb-3">Entrar</h2>
           <div class="mb-3">
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-              placeholder="Usuário">
+              placeholder="Usuário ou email">
           </div>
           <div class="mb-3">
             <input type="password" class="form-control" style="border-top: none" id="exampleInputPassword1" placeholder="Senha">
           </div>
-          <button type="submit" class="btn-submit btn btn-primary">Entrar</button>
+          <button type="submit" class="btn-submit btn btn-primary mb-3">Entrar</button>
+          <a id="link-cadastro" href="sobre.html">Cadastre-se </a>
         </form>
       </div>
     </div>
@@ -40,30 +42,36 @@ export default {
 
 <style scoped>
 .main{
-  /* background-color: #012E40 !important; */
-  background-image: url(../assets/backgroundNight.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
-.totoro-img{
+.main .row .col #totoro-img{
+  height: 100%;
+  width: 100%;
   max-height: 1080px;
-  /* animation: raios 5s infinite linear; */
+  max-width: 878px;
+}
+
+#logo{
+  width: 420px; 
+  margin-bottom: 25px; 
 }
 
 .form-control{
-  background-color: #F2E3D5 !important;
+  background-color: #D9D9D9 !important;
   padding-left: 23px !important;
   height: 75px;
 }
 
 .form-login{
   margin-top: 25%;
+  margin-right: 15%;
 }
 
 .titulo-login{
   text-align: start;
-  color: #3CA6A6;
+  color: #30A5BF;
   font-family: fantasy;
   /* text-shadow: 1px -4px 40px #F2E205 !important; */
 }
@@ -71,8 +79,8 @@ export default {
 .btn-submit{
   width: 100%;
   height: 60px;
-  background-color: #3CA6A6;
-  border-color: #3CA6A6;
+  background-color: #30A5BF;
+  border-color: #30A5BF;
   font-family: fantasy;
   letter-spacing: 1px;
   color: #F2E3D5;
@@ -81,7 +89,8 @@ export default {
 
 .btn-submit:hover {
   background-color: transparent;
-  border-color: #F2E3D5;
+  border-color: #30A5BF;
+  color: #30A5BF;
 }
 
 .btn-submit:active, .btn-submit:focus{
@@ -89,6 +98,12 @@ export default {
   box-shadow: 0 0 2em #F2E205 !important;
   background-color: #F2E205;
   border-color: #F2E205;
+}
+
+#link-cadastro{
+  color: #30A5BF;
+  text-align: start;
+  display: block;
 }
 
 /* Animações */
