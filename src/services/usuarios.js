@@ -10,4 +10,13 @@ export default {
             }
         });
     },
+
+    postUsuario: async (dadosCadastro) => {
+        let barramento = 'usuarios/cadastro';
+        return await api.post(barramento, {
+            usuario: dadosCadastro.usuario,
+            email: dadosCadastro.email,
+            senha: dadosCadastro.senha
+            });
+    },
 }

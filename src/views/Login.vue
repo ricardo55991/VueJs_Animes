@@ -10,13 +10,13 @@
           <img id="logo" src="../assets/animesversoLogoHD.png" alt="logo" />
           <h2 class="titulo-login mb-3">Entrar</h2>
           <div class="mb-3">
-            <input v-model="usuario" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            <input v-model="usuario" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
               placeholder="Usuário ou email">
           </div>
           <div class="mb-3">
             <input v-model="senha" type="password" class="form-control" style="border-top: none" id="exampleInputPassword1" placeholder="Senha">
           </div>
-          <button type="submit" class="btn-submit btn btn-primary mb-3" @click="validarLogin(usuario, senha)">Entrar</button>
+          <button type="submit" class="btn-submit btn btn-primary mb-3" @click="validarLogin()">Entrar</button>
           <button type="button" class="link-cadastro btn btn-link" @click="paginaCadastro()">Cadastre-se</button>
         </form>
       </div>
@@ -51,12 +51,17 @@ export default {
       this.setPaginaCadastro(true);
     },
 
-    async validarLogin(usuario, senha){
-      const login = {
-        usuario: usuario,
-        senha: senha
+    async validarLogin(){
+      if(this.usuario && this.senha){
+        let login = {
+          usuario: this.usuario,
+          senha: this.senha
+        }
+        let usuarioValidado = await this.getUsuario(login);
+        if(usuarioValidado == true){
+          this.$router.push({ path: '/home' });
+        }
       }
-      await this.getUsuario(login);
     }
   },
 

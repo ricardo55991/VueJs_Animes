@@ -6,13 +6,9 @@ export default {
         paginaCadastro: false,
     },
     getters: {
-        // getTeste: (state) => state.teste
         getPaginaCadastro: (state) => state.paginaCadastro,
     },
     mutations: {
-        // setTeste: (state, teste) => {
-        //     state.teste = teste;
-        // }
         setPaginaCadastro: (state, valor) => {
             state.paginaCadastro = valor;
         }
