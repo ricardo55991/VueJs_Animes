@@ -1,5 +1,8 @@
-import { createStore } from 'vuex'
-import anime from './modules/anime'
+import { createStore } from 'vuex';
+import animes from './modules/animes';
+import usuarios from './modules/usuarios';
+import gerais from './modules/gerais';
+
 
 export default createStore({
   state: {
@@ -11,6 +14,8 @@ export default createStore({
   actions: {
   },
   modules: {
-    anime
+    animes,
+    usuarios,
+    gerais
   }
 })

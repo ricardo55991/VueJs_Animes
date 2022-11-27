@@ -1,17 +1,21 @@
-import servicoApi from '../../services/anime';
+import servicoApi from '../../services/animes';
 
 export default {
     namespaced: true,
     state: {
-        // teste: "",
+        paginaCadastro: false,
     },
     getters: {
         // getTeste: (state) => state.teste
+        getPaginaCadastro: (state) => state.paginaCadastro,
     },
     mutations: {
         // setTeste: (state, teste) => {
         //     state.teste = teste;
         // }
+        setPaginaCadastro: (state, valor) => {
+            state.paginaCadastro = valor;
+        }
     },
     actions: {
         async getHora(){

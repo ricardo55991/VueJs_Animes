@@ -10,6 +10,15 @@
   </div>
 </template>
 
+<script>
+
+export default {
+  name: "App",
+  components:{
+  }
+}
+</script>
+
 <style>
 html, body{
   /* height: 100%;
