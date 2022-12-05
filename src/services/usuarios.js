@@ -19,4 +19,13 @@ export default {
             senha: dadosCadastro.senha
             });
     },
+
+    putUsuario: async (dadosUsuario) => {
+        let barramento = 'usuarios/atualizar';
+        return await api.put(barramento, {
+            email: dadosUsuario.email,
+            senha: dadosUsuario.senha,
+            id_usuario: dadosUsuario.idUsuario
+            });
+    }
 }

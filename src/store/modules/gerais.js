@@ -6,15 +6,20 @@ export default {
             corBackground: "",
             ativo: false,
             texto: ""
-        }
+        },
+        navbarSemBarraPesquisa: false,
     },
     getters: {
-        getAlerta: state => state.alerta
+        getAlerta: state => state.alerta,
+        getNavbarSemBarraPesquisa: state => state.navbarSemBarraPesquisa,
     },
     mutations: {
         setAlerta: (state, alerta) => {
             state.alerta = alerta;
-        }
+        },
+        setNavbarSemBarraPesquisa: (state, value) => {
+            state.navbarSemBarraPesquisa = value;
+        } 
         
     },
     actions: {
