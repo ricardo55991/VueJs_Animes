@@ -16,8 +16,8 @@
           </div>
           <div id="box-form">
             <form class="d-flex">
-              <input class="input-anime form-control me-2 col-1" type="search" placeholder="Buscar anime" aria-label="Search">
-              <button type="button" class="botoes-navbar btn">
+              <input v-model="nomeAnime" class="input-anime form-control me-2 col-1" type="search" placeholder="Buscar anime" aria-label="Search">
+              <button @click="buscarAnime()" type="button" class="botoes-navbar btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill=" white" class="bi bi-search" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                 </svg>
@@ -77,7 +77,8 @@ export default {
   },
   methods: {
     ...mapMutations("gerais", ["setNavbarSemBarraPesquisa"]),
-
+    ...mapMutations("animes", ["setNomeAnime"]),
+    
     abrirPerfil(){
       this.$router.push({ path: '/perfil' });
       this.setNavbarSemBarraPesquisa(true);
@@ -93,6 +94,10 @@ export default {
     sair(){
       this.$router.push({ path: '/login' });
       this.setNavbarSemBarraPesquisa(false);
+    },
+
+    buscarAnime(){
+      this.setNomeAnime(this.nomeAnime);
     }
   },
 

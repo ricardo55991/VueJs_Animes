@@ -6,10 +6,12 @@ export default {
     state: {
         paginaCadastro: false,
         animeSelecionado: [],
+        nomeAnime: false,
     },
     getters: {
         getPaginaCadastro: (state) => state.paginaCadastro,
         getAnimeSelecionado: (state) => state.animeSelecionado,
+        getNomeAnime: (state) => state.nomeAnime,
     },
     mutations: {
         setPaginaCadastro: (state, value) => {
@@ -17,6 +19,9 @@ export default {
         },
         setAnimeSelecionado: (state, value) => {
             state.animeSelecionado = value;
+        },
+        setNomeAnime: (state, value) => {
+            state.nomeAnime = value;
         },
     },
     actions: {
